@@ -24,7 +24,9 @@ public class MainActivity extends Activity {
 				try {
 					String address = addressfield.getText().toString();
 					address = address.replace(' ', '+');
-					Intent geoIntent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + address));
+					Intent geoIntent = new Intent(
+							android.content.Intent.ACTION_VIEW, Uri
+									.parse("geo:0,0?q=" + address));
 					startActivity(geoIntent);
 				} catch (Exception ex) {
 					ex.printStackTrace();
